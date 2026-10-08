@@ -1,0 +1,11 @@
+.env
+frontend/.env
+frontend/.env.local
+frontend/.env.*
+!frontend/.env.example
+backend/.venv/
+backend/__pycache__/
+backend/*.py[cod]
+backend/campusfix.db
+frontend/node_modules/
+frontend/dist/

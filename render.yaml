@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: campusfix-ai-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app --workers 2 --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: CORS_ORIGINS
+        value: "https://your-vercel-app.vercel.app,http://localhost:5173,http://127.0.0.1:5173"
